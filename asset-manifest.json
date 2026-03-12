@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/just_for_racheal/static/css/main.bfa545f2.css",
+    "main.js": "/just_for_racheal/static/js/main.aafe3078.js",
+    "static/js/453.b163d7da.chunk.js": "/just_for_racheal/static/js/453.b163d7da.chunk.js",
+    "index.html": "/just_for_racheal/index.html",
+    "main.bfa545f2.css.map": "/just_for_racheal/static/css/main.bfa545f2.css.map",
+    "main.aafe3078.js.map": "/just_for_racheal/static/js/main.aafe3078.js.map",
+    "453.b163d7da.chunk.js.map": "/just_for_racheal/static/js/453.b163d7da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfa545f2.css",
+    "static/js/main.aafe3078.js"
+  ]
+}
