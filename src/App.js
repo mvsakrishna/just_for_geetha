@@ -61,7 +61,7 @@ function App() {
       </audio>
 
       {/* Fullscreen background */}
-      <img src="/sunset.jpg" alt="Sunset river" className="background" />
+      <img src={process.env.PUBLIC_URL + '/sunset.jpg'} alt="Sunset river" className="background" />
 
       <div className="overlay">
         <div className="intro">
