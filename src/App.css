@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/* Fullscreen background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Overlay container */
+.overlay {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Intro text */
+.intro {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.5rem;
+}
+
+/* Card styling (more transparent) */
+.card {
+  background: rgba(255, 255, 255, 0.4); /* transparent */
+  padding: 25px 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  color: #333;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.card b {
+  color: #d9534f; /* highlight */
+}
+
+/* Question text */
+.question {
+  margin: 20px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Button styling */
+button {
+  background: #ff6b81;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4757;
+}
+
+/* Response textarea */
+.response {
+  margin-top: 15px;
+}
+
+.response textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+/* Floating roses and hearts */
+.rose, .heart {
+  position: fixed;
+  top: -50px;
+  font-size: 28px;
+  pointer-events: none;
+  animation-name: floatDown;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/* Keyframes for falling with drift */
+@keyframes floatDown {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(110vh) translateX(var(--drift, 0));
+    opacity: 0;
   }
 }
